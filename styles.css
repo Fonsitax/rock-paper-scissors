@@ -1,0 +1,165 @@
+/* General Reset and Font Styling */
+* {
+    font-family: 'Monospace', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ensure the container stays centered vertically */
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Dark to light gradient */
+    animation: gradientBG 8s ease infinite; /* Subtle animation for dynamic background */
+    background-size: 400% 400%; /* Makes the gradient move slowly */
+    padding: 20px;
+}
+
+/* Gradient Animation */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Main Game Container */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #1e3a5f, #3b82f6); /* Gradient background for excitement */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    max-width: 800px;
+    width: 100%; /* Responsive layout */
+    color: white; /* Text color inside the container */
+}
+
+/* Displays for Player and Computer Choices */
+#yourDisplay, #computerDisplay {
+    font-size: 2rem;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Result Display Styling */
+#resultDisplay {
+    font-size: 3.5rem;
+    margin-top: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add depth to result text */
+    color: #ffd700; /* Vibrant yellow for the result */
+    animation: pulse 0.5s ease-in-out infinite alternate; /* Pulse effect for excitement */
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Score Display - Align Player and Computer Scores */
+.scoreDisplay {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    width: 60%; /* Ensure scores are closer to each other */
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* Translucent background for scores */
+    border-radius: 10px;
+}
+
+/* Player and Computer Scores */
+#playerScoreDisplay, #computerScoreDisplay {
+    font-size: 2rem;
+    color: #fdfdfd; /* Light color to stand out */
+}
+
+/* Differentiate colors for win/lose */
+.greenText, #playerScoreDisplay {
+    color: #7ef57e; /* Bright green for player win */
+}
+
+.redText, #computerScoreDisplay {
+    color: #ff5959; /* Bright red for computer win */
+}
+
+/* Button Section */
+.custon-button {
+    width: 120px;
+    height: 120px;
+    font-size: 3rem; /* Increase this to make the emoji larger */
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 20px;
+    background-color: #ffd700; /* Bright yellow for buttons */
+    color: #1e3a5f; /* Dark blue text on the button */
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow for buttons */
+}
+
+
+/* Hover and active animation for buttons */
+.custon-button:hover {
+    background-color: #ff5959; /* Bright red on hover */
+    transform: scale(1.1); /* Grow effect */
+    color: #ffffff; /* White text on hover */
+}
+
+.custon-button:active {
+    transform: scale(0.95);
+}
+
+/* Emoji Styling for VS */
+.vs-emoji {
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #ffd700; /* Bright yellow to match buttons */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .game-container {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .custon-button {
+        width: 100px;
+        height: 100px;
+        font-size: large;
+    }
+
+    #resultDisplay {
+        font-size: 2.5rem;
+    }
+
+    #yourDisplay, #computerDisplay {
+        font-size: 1.5rem;
+    }
+
+    .scoreDisplay {
+        font-size: 1.2rem;
+    }
+}

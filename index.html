@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🪨 Rock 📃 Paper ✂️ Scissors</title>
+</head>
+<body>
+    <div id="choices">
+        <button class="custon-button" onclick="play('rock')">🪨</button>
+        <button class="custon-button" onclick="play('paper')">📃</button>
+        <button class="custon-button" onclick="play('scissors')">✂️</button>
+    </div>       
+    <div id="yourDisplay">You</div> 
+    <p class="vs-emoji">🆚</p>
+    <div id="computerDisplay">Computer</div>
+    <div id="resultDisplay"></div> 
+   
+    <div class="scoreDisplay">You
+    <span id="playerScoreDisplay">0</span>
+   </div>
+
+   <div class="scoreDisplay">Computer
+    <span id="computerScoreDisplay"> 0</span>
+   </div>
+    
+    <script src="index.js"></script> 
+
+</body>
+</html>
